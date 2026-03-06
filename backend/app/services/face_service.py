@@ -7,10 +7,9 @@ from typing import Optional, List
 logger = logging.getLogger("face_service")
 
 # Choose model and detector backend (opencv is safe on Windows)
-MODEL_NAME = "Facenet"           # accurate embedding model
-DETECTOR_BACKEND = "opencv"      # detector backend: 'opencv','ssd','mtcnn','dlib' etc.
-# threshold for cosine similarity — tune if you see false positives/negatives
-DEFAULT_THRESHOLD = 0.60
+MODEL_NAME = "OpenFace"
+DETECTOR_BACKEND = "opencv"
+DEFAULT_THRESHOLD = 0.65
 
 def get_face_embedding(image_path: str) -> Optional[List[float]]:
     """
